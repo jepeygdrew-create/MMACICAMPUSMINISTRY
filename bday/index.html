@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>MMACI Campus Ministry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="./logo.jpg"
+         alt="MMACI Campus Ministry Logo"
+         class="ministry-logo">
+    <span>MMACI CAMPUS MINISTRY</span>
+  </div>
+
+  <div class="case-tag">
+    <b></b>
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section class="screen active" id="intro">
+    <p class="eyebrow">
+      <span class="live-dot"></span> CONFIDENTIAL INVESTIGATION
+    </p>
+    <p class="small-label">A SPECIAL CASE HAS BEEN OPENED</p>
+
+    <h1>Someone deserves<br>to be <em>recognized.</em></h1>
+
+    <p class="description">
+      An important person has been identified within our community.
+      Follow the clues and discover the truth.
+    </p>
+
+    <div class="file-card">
+      <div class="file-icon">✉</div>
+      <div class="file-info">
+        <strong>CASE FILE NO. 001</strong>
+        <p>Subject identity: REDACTED</p>
+        <p>Classification: TOP SECRET</p>
+      </div>
+      <span class="stamp">RESTRICTED</span>
+    </div>
+
+    <button class="primary" id="startButton">
+      OPEN CASE FILE <span>→</span>
+    </button>
+
+    <p class="footnote">
+      Proceed only if you are ready to uncover the truth.
+    </p>
+  </section>
+
+  <!-- CLUE 1 -->
+  <section class="screen" id="clue1">
+    <div class="progress-label">
+      <span>INVESTIGATION PROGRESS</span>
+      <span>01 / 03</span>
+    </div>
+
+    <div class="progress">
+      <div style="width:33%"></div>
+    </div>
+
+    <p class="eyebrow">EVIDENCE 01 · THE FOUNDATION</p>
+
+    <h2>Every mission begins with a <em>calling.</em></h2>
+
+    <p class="description">
+      Read the clue and select the correct answer.
+    </p>
+
+    <div class="clue-card">
+      <span class="quote-mark">“</span>
+      I cannot be held in your hands, yet I can guide them.
+      I am strengthened through prayer and shown through service.
+      What am I?
+    </div>
+
+    <div class="options">
+      <button type="button" class="option"
+        onclick="answer(this, false)">A. Recognition</button>
+
+      <button type="button" class="option"
+        onclick="answer(this, true)">B. Faith</button>
+
+      <button type="button" class="option"
+        onclick="answer(this, false)">C. Popularity</button>
+    </div>
+
+    <p class="feedback" aria-live="polite"></p>
+  </section>
+
+  <!-- CLUE 2 -->
+  <section class="screen" id="clue2">
+    <div class="progress-label">
+      <span>INVESTIGATION PROGRESS</span>
+      <span>02 / 03</span>
+    </div>
+
+    <div class="progress">
+      <div style="width:66%"></div>
+    </div>
+
+    <p class="eyebrow">EVIDENCE 02 · THE MISSION</p>
+
+    <h2>A leader's impact is measured by <em>what?</em></h2>
+
+    <p class="description">
+      The second piece of evidence has been recovered.
+    </p>
+
+    <div class="clue-card">
+      A true servant-leader does not simply stand in front.
+      Through encouragement, guidance, and example, they help
+      others grow. What matters most?
+    </div>
+
+    <div class="options">
+      <button type="button" class="option"
+        onclick="answer(this, false)">A. Being in control</button>
+
+      <button type="button" class="option"
+        onclick="answer(this, false)">B. Receiving praise</button>
+
+      <button type="button" class="option"
+        onclick="answer(this, true)">C. Helping others grow</button>
+    </div>
+
+    <p class="feedback" aria-live="polite"></p>
+  </section>
+
+  <!-- CLUE 3 -->
+  <section class="screen" id="clue3">
+    <div class="progress-label">
+      <span>INVESTIGATION PROGRESS</span>
+      <span>03 / 03</span>
+    </div>
+
+    <div class="progress">
+      <div style="width:100%"></div>
+    </div>
+
+    <p class="eyebrow">EVIDENCE 03 · THE FINAL CLUE</p>
+
+    <h2>One last question before the <em>reveal.</em></h2>
+
+    <p class="description">
+      Complete the statement to uncover the final clue.
+    </p>
+
+    <div class="clue-card">
+      “Let all that you do be done in ______.”
+      <p class="verse-ref">— 1 Corinthians 16:14</p>
+    </div>
+
+    <div class="options">
+      <button type="button" class="option"
+        onclick="answer(this, false)">A. Silence</button>
+
+      <button type="button" class="option"
+        onclick="answer(this, true)">B. Love</button>
+
+      <button type="button" class="option"
+        onclick="answer(this, false)">C. Fear</button>
+    </div>
+
+    <p class="feedback" aria-live="polite"></p>
+  </section>
+
+  <!-- SECRET CODE -->
+  <section class="screen" id="unlock">
+    <p class="eyebrow">
+      <span class="live-dot"></span> ALL EVIDENCE COLLECTED
+    </p>
+
+    <div class="lock-icon">▣</div>
+
+    <h2>The truth is almost <em>within reach.</em></h2>
+
+    <p class="description">
+      You have uncovered every clue. Enter the access code
+      to discover the purpose of this investigation.
+    </p>
+
+    <div class="code-box">
+      <label for="secretCode">ENTER THE SECRET CODE</label>
+
+      <input id="secretCode"
+             type="text"
+             maxlength="20"
+             placeholder="Enter code..."
+             autocomplete="off">
+
+      <button type="button" class="primary full" id="unlockButton">
+        DECRYPT FILE →
+      </button>
+
+      <p class="feedback" id="codeFeedback" aria-live="polite"></p>
+
+      <p class="hint">
+        Hint: The quality that makes every act of service meaningful.
+      </p>
+    </div>
+  </section>
+
+  <!-- BIRTHDAY REVEAL -->
+  <section class="screen reveal" id="reveal">
+    <div class="confetti" id="confetti"></div>
+
+    <p class="eyebrow">CASE STATUS: SOLVED</p>
+
+    <div class="reveal-seal">✦</div>
+
+    <p class="small-label">THE SUBJECT HAS BEEN IDENTIFIED</p>
+
+    <h1 class="birthday-title">
+      Happy Birthday,<br><em>Ma'am!</em>
+    </h1>
+
+    <p class="description centered">
+      The investigation was never about finding a mystery.
+    </p>
+
+    <div class="truth-card">
+      <p class="eyebrow">THE REAL REASON FOR THIS CASE</p>
+
+      <h2>You are appreciated. More than you know.</h2>
+
+      <p>
+        Behind this investigation is a group of people who want
+        to celebrate someone who has guided, encouraged, and
+        served alongside them. Today, the spotlight is yours.
+      </p>
+    </div>
+
+    <div class="message-card">
+      <p class="eyebrow">
+        A MESSAGE FROM YOUR CAMPUS MINISTRY FAMILY
+      </p>
+
+      <p id="birthdayMessage" class="birthday-message"></p>
+
+      <p class="signature">
+        With gratitude and prayers,<br>
+        <strong>Your Campus Ministry Members ♥</strong>
+      </p>
+    </div>
+
+    <div class="verse-card">
+      <p>
+        “God is not unjust; he will not forget your work and the love
+        you have shown him as you have helped his people.”
+      </p>
+      <strong>HEBREWS 6:10</strong>
+    </div>
+
+    <!-- FINAL COUNTDOWN -->
+    <div class="final-surprise">
+      <p class="eyebrow">ONE LAST SURPRISE</p>
+
+      <h2>But wait, Ma'am...</h2>
+
+      <p class="description">
+        There's one more thing waiting for you.
+      </p>
+
+      <button type="button" class="primary" id="surpriseButton">
+        REVEAL YOUR SURPRISE →
+      </button>
+
+      <div class="countdown-box hidden" id="countdownBox">
+        <p id="countdownText">5</p>
+        <span>PREPARING YOUR SURPRISE...</span>
+      </div>
+    </div>
+
+    <button type="button" class="text-button" id="celebrateButton">
+      Celebrate again ✨
+    </button>
+
+    <p class="footnote centered">
+      CASE FILE 001 · CLOSED WITH LOVE
+    </p>
+  </section>
+
+</main>
+
+<!-- ORIGINAL PICTURE POPUP; KEPT FOR COMPATIBILITY -->
+<div class="picture-popup hidden"
+     id="picturePopup"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="popupTitle">
+
+  <div class="picture-content">
+    <button type="button"
+            class="close-popup"
+            id="closePopup"
+            aria-label="Close picture">✕</button>
+
+    <p class="eyebrow centered">
+      WITH LOVE, YOUR MINISTRY FAMILY
+    </p>
+
+    <img src="mmacicampusministryfam..jpg"
+         alt="Birthday surprise for Ma'am"
+         id="birthdayPicture">
+
+    <h2 id="popupTitle">You're a blessing to us! ♥</h2>
+
+    <p class="description centered">
+      Thank you for being part of our journey.
+      Happy Birthday, Ma'am!
+    </p>
+
+    <button type="button" class="primary" id="finishButton">
+      CLOSE SURPRISE ✨
+    </button>
+  </div>
+</div>
+
+<!-- BIRTHDAY ENVELOPE GALLERY -->
+<div id="envelopeCover"
+     class="envelope-cover hidden"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Birthday photo memories">
+
+  <div class="envelope-panel">
+
+    <button type="button"
+            id="minimizeEnvelope"
+            class="minimize-photos"
+            aria-label="Minimize photo gallery">
+      − Minimize
+    </button>
+
+    <div id="envelopeLanding">
+      <p class="eyebrow centered">A SPECIAL SURPRISE FOR YOU</p>
+
+      <button type="button"
+              id="openEnvelope"
+              class="envelope-button"
+              aria-label="Open the birthday envelope">
+
+        <div class="envelope-art" aria-hidden="true">
+          <div class="envelope-letter">
+            <span>Made with love</span>
+            <strong>For Ma'am ♥</strong>
+          </div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-heart">♥</div>
+        </div>
+
+        <span class="open-folder-text">OPEN THIS ENVELOPE</span>
+        <span class="envelope-hint">
+          Six memories are waiting inside ✨
+        </span>
+      </button>
+    </div>
+
+    <div id="sixPhotos" class="six-photos hidden">
+      <p class="eyebrow centered">WITH LOVE, YOUR MINISTRY FAMILY</p>
+
+      <h2>Beautiful Memories ♥</h2>
+
+      <p class="description centered">
+        Six special memories to celebrate a special person.
+      </p>
+
+      <div class="photo-grid">
+        <img src="mmacicampusministryfam..jpg" alt="Birthday memory 1" loading="lazy">
+        <img src="photo2.jpg" alt="Birthday memory 2" loading="lazy">
+        <img src="photo3.jpg" alt="Birthday memory 3" loading="lazy">
+        <img src="photo4.jpg" alt="Birthday memory 4" loading="lazy">
+        <img src="photo5.jpg" alt="Birthday memory 5" loading="lazy">
+        <img src="photo6.jpg" alt="Birthday memory 6" loading="lazy">
+      </div>
+
+      <p class="description centered">
+        Happy Birthday, Ma'am! Thank you for being a blessing
+        to our Campus Ministry family. ♥
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FLOATING SHORTCUT TO REOPEN THE PHOTO GALLERY -->
+<button type="button"
+        id="miniEnvelope"
+        class="mini-envelope hidden"
+        aria-label="Reopen birthday memories"
+        title="Open birthday memories">
+  <span aria-hidden="true">✉</span>
+  <span class="mini-envelope-label">Memories</span>
+</button>
+
+<footer>
+  <span>CAMPUS MINISTRY</span>
+  <span>FAITH · SERVICE · COMMUNITY</span>
+</footer>
+
+<audio id="birthdayMusic"
+       src="Happy Birthday Song.mp3"
+       preload="auto"
+       loop></audio>
+
+<script src="script.js"></script>
+
+
+<!-- ENVELOPE SURPRISE -->
+<div id="envelopeCover" class="envelope-cover hidden">
+  <div class="envelope-content">
+    <h2>A Special Letter For You 💌</h2>
+    <p>Someone prepared something special for you!</p>
+
+    <button id="openEnvelope" type="button">
+      Open My Letter 💌
+    </button>
+
+    <button id="minimizeEnvelope" type="button">
+      Minimize
+    </button>
+  </div>
+</div>
+
+<!-- FLOATING ENVELOPE ICON -->
+<button id="miniEnvelope" class="mini-envelope hidden"
+        type="button" aria-label="Open envelope">
+  💌
+</button>
+
+</body>
+</html>
